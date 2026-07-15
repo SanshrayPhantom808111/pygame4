@@ -27,7 +27,7 @@ class Sprite(pygame.sprite.Sprite):
             self.velocity[0] = - self.velocity[0]
             boundry_hit = True
         if self.rect.top<=0 or self.rect.bottom>=400:
-            self.velocity[0] = - self.velocity[0]
+            self.velocity[1] = - self.velocity[1]
             boundry_hit = True
         if boundry_hit:
             pygame.event.post(pygame.event.Event(SPRITE_COLOR_CHANGE_EVENT))
